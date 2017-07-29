@@ -5,11 +5,11 @@
 ## 用法
 
 * Android Studio
-	
-	```
-	compile 'com.huxley:wiidialog:1.0.0'
-	```
-	
+
+    ```groovy
+    compile 'com.huxley:wiidialog:1.1.1'
+    ```
+
 * Eclipse
 	
-	下载最新 aar:[wiidialog-1.0.0.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiidialog/1.0.0/wiidialog-1.0.0.aar)
+	下载最新 aar:[wiidialog-1.1.1.aar](https://dl.bintray.com/huangweiyi/maven/com/huxley/wiidialog/1.1.1/wiidialog-1.1.1.aar)

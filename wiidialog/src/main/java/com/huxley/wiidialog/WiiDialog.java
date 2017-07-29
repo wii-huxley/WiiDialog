@@ -62,6 +62,7 @@ public class WiiDialog {
    * Listener to notify back press
    */
   private final OnBackPressListener onBackPressListener;
+  private final OnItemLongClickListener onItemLongClickListener;
 
   /**
    * Content
@@ -84,6 +85,7 @@ public class WiiDialog {
     holder = builder.getHolder();
 
     onItemClickListener = builder.getOnItemClickListener();
+    onItemLongClickListener = builder.getOnItemLongClickListener();
     onClickListener = builder.getOnClickListener();
     onDismissListener = builder.getOnDismissListener();
     onCancelListener = builder.getOnCancelListener();
@@ -270,6 +272,15 @@ public class WiiDialog {
             return;
           }
           onItemClickListener.onItemClick(WiiDialog.this, item, view, position);
+        }
+      });
+      holderAdapter.setOnItemLongClickListener(new OnHolderLongListener() {
+        @Override
+        public boolean onItemLongClick(Object item, View view, int position) {
+          if (onItemLongClickListener == null) {
+            return false;
+          }
+          return onItemLongClickListener.onItemLongClick(WiiDialog.this, item, view, position);
         }
       });
     }

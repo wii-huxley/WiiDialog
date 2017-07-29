@@ -33,6 +33,7 @@ public class WiiDialogBuilder {
   private OnClickListener onClickListener;
   private OnDismissListener onDismissListener;
   private OnCancelListener onCancelListener;
+  private OnItemLongClickListener onItemLongClickListener;
   private OnBackPressListener onBackPressListener;
 
   private boolean isCancelable = true;
@@ -205,6 +206,16 @@ public class WiiDialogBuilder {
   public WiiDialogBuilder setOnItemClickListener(OnItemClickListener listener) {
     this.onItemClickListener = listener;
     return this;
+  }
+
+
+  public WiiDialogBuilder setOnItemLongClickListener(OnItemLongClickListener listener) {
+    this.onItemLongClickListener = listener;
+    return this;
+  }
+
+  public OnItemLongClickListener getOnItemLongClickListener() {
+    return onItemLongClickListener;
   }
 
   /**
